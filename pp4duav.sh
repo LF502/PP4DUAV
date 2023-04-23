@@ -1,0 +1,2 @@
+python pp4duav.py --population 100 --max_iter 200 && python pp4duav.py --population 200 --max_iter 200 && python pp4duav.py --population 100 --max_iter 300 && python pp4duav.py --population 200 --max_iter 300
+wait

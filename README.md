@@ -13,6 +13,8 @@ Path Plan for Delivery Unmanned Aerial Vehicle
 
 [香港九龙三维地图模型](https://www.hkmapservice.gov.hk/OneStopSystem/map-search?product=OSSCatB)转换的数字高程地图模型（DEM）
 
+![地图环境](\images\map.png)
+
 ### 规划分类
 
 - **局部路径规划**：面向单个物流无人机的路径规划
@@ -66,6 +68,10 @@ Path Plan for Delivery Unmanned Aerial Vehicle
 
 为全局路径规划预留了多机型的扩展空间，但**尚未实现**
 
+### GirdPlacerToCSV.mcr
+
+3dsMAX的脚本，用于生成.max模型的数字高程地图模型DEM文件所需的x,y,z坐标信息，Python中使用pandas.read_csv载入，再用pandas.pivot_table转化为DEM
+
 ## 实现功能
 
 ### 无人机飞行路径识别码（ID）
@@ -90,6 +96,14 @@ Theta\*算法（基于[A\*算法](https://github.com/zhm-real/PathPlanning)加�
 - 视线检查二分法采样，加之DEM可能不准确，放进模型中直线飞行路径可能存在碰撞
 - 可能陷入局部最优，尽管陷入后会检测并调整代价系数（cost_ratio），但耗时明显增加
 
+#### 结果示例
+
+程序可视化示例（地图数据超过200\*200后可视化卡顿严重）
+
+![](\images\theta-star_path.png)
+
+![](\images\theta-star_route.png)
+
 ### 全局路径规划（TaskAssigner）
 
 #### 算法
@@ -105,6 +119,20 @@ Theta\*算法（基于[A\*算法](https://github.com/zhm-real/PathPlanning)加�
 - 仅支持配送中心发往配送点的配送任务路径规划
 - 遗传进化过程中小概率出现异常染色体和基因（不在预期），故加入了染色体完整性检查
 - 无人机配送时间窗仅考虑晚点和最晚送达时间，假设配送点容量无限大
+
+#### 结果示例
+
+适应度函数收敛
+
+![](\images\ga_fit.png)
+
+无人机飞行路径示意图
+
+![](\images\ga_route.png)
+
+无人机任务执行时序图（非上图结果）
+
+![](\ga_itinerary.png)
 
 ## 重要参考资料
 

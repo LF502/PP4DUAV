@@ -100,7 +100,7 @@ Theta\*算法（基于[A\*算法](https://github.com/zhm-real/PathPlanning)加�
 
 程序可视化示例（地图数据超过200\*200后可视化卡顿严重）
 
-![飞行路径三维图](/images/heta-star_path.png)
+![飞行路径三维图](/images/theta-star_path.png)
 
 ![飞行路径俯视图](/images/theta-star_route.png)
 

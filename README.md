@@ -13,7 +13,7 @@ Path Plan for Delivery Unmanned Aerial Vehicle
 
 [香港九龙三维地图模型](https://www.hkmapservice.gov.hk/OneStopSystem/map-search?product=OSSCatB)转换的数字高程地图模型（DEM）
 
-![地图环境](\images\map.png)
+![地图环境](/images/map.png)
 
 ### 规划分类
 
@@ -100,9 +100,9 @@ Theta\*算法（基于[A\*算法](https://github.com/zhm-real/PathPlanning)加�
 
 程序可视化示例（地图数据超过200\*200后可视化卡顿严重）
 
-![](\images\theta-star_path.png)
+![飞行路径三维图](/images/heta-star_path.png)
 
-![](\images\theta-star_route.png)
+![飞行路径俯视图](/images/theta-star_route.png)
 
 ### 全局路径规划（TaskAssigner）
 
@@ -122,17 +122,17 @@ Theta\*算法（基于[A\*算法](https://github.com/zhm-real/PathPlanning)加�
 
 #### 结果示例
 
-适应度函数收敛
+适应度收敛图
 
-![](\images\ga_fit.png)
+![适应度收敛](/images/ga_fit.png)
 
 无人机飞行路径示意图
 
-![](\images\ga_route.png)
+![飞行路径示意](/images/ga_route.png)
 
 无人机任务执行时序图（非上图结果）
 
-![](\ga_itinerary.png)
+![任务执行时序](\ga_itinerary.png)
 
 ## 重要参考资料
 

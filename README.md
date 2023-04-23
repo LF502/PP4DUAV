@@ -54,9 +54,9 @@ Path Plan for Delivery Unmanned Aerial Vehicle
 
 ### HKKowloonTD.csv
 
-无人机物流系统的物流网点数据，其中字母（A, B, ...）为配送中心，数字（1, 2, ...）为配送点（否则会引起字符串和数字的TypeError）
+无人机物流系统的物流网点数据，其中字母（A, B, ...）为配送中心（Terminal），数字（1, 2, ...）为配送点（Distributor）
 
-目前全局路径规划仅支持**多个配送中心送往所属配送点**的配送任务规划，否则会报错或非法解
+目前全局路径规划仅支持**多个配送中心送往所属配送点**的配送任务规划，否则会报TypeError或出现非法解
 
 ### HKKowloonTasks.csv
 
@@ -70,13 +70,13 @@ Path Plan for Delivery Unmanned Aerial Vehicle
 
 ### GirdPlacerToCSV.mcr
 
-3dsMAX的脚本，用于生成.max模型的数字高程地图模型DEM文件所需的x,y,z坐标信息，Python中使用pandas.read_csv载入，再用pandas.pivot_table转化为DEM
+3dsMAX的脚本，用于生成.max模型的数字高程地图模型DEM文件所需的x,y,z坐标信息，生成的数据可在Python中使用pandas.read_csv载入，再用pandas.pivot_table转化为DEM完成处理
 
 ## 实现功能
 
 ### 无人机飞行路径识别码（ID）
 
-识别无人机的飞行路径，识别货物类型和重量，飞行路径起止点，路径规划方式，并存储必要数据，既可以展示当前规划路径必要信息，亦可用作DataFrame的索引或字典的键值
+识别无人机的飞行路径，识别货物类型和重量，飞行路径起止点，路径规划方式，并存储必要数据，既可以展示当前规划路径必要信息，亦可用作DataFrame的索引或字典的键名
 
 ### 局部路径规划（PathPlanner）
 

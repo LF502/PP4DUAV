@@ -1273,7 +1273,7 @@ class TaskAssigner(object):
                         individual[k]['delays'] = grouped['delay'].transform('sum')
                         individual[k]['fitness'] = (individual[k][col] * fitness).sum(axis=1)
                     
-                    idx = (individual[i].fitness - individual[j].fitness)
+                    idx = (individual[i].fitness - individual[j].fitness).astype(float)
                     # j better than i
                     if idx.max() > 0:
                         src = individual[i].src[idx.idxmax()]

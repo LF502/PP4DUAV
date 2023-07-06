@@ -1,6 +1,10 @@
 # 物流无人机路径规划
 
-Path Plan for Delivery Unmanned Aerial Vehicle
+Path Plan for Delivery Unmanned Aerial Vehicle (abbr.PP4DUAV)
+
+## 本科毕业论文最终稿 / Final Thesis in Simplified Chinese
+
+[Google Drive](https://drive.google.com/file/d/1yprHxeqso2e5kB5ZR_JG73kwGDX7GXu5/view)
 
 ## 背景介绍
 
